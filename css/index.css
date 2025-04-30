@@ -1,0 +1,15 @@
+*{
+    scroll-behavior: smooth;
+}
+
+
+#ani{
+    animation: test 5s infinite forwards;
+}
+
+@keyframes test {
+    from{
+        width: 0%;
+    }
+}
+

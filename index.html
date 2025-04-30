@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Project</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind css CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Typed.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- External css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+    <div>
+        
+        <!-- Navbar -->
+        <div class="shadow-lg lg:px-32 md:px-8 px-6 py-2 w-full bg-white sticky top-0 left-0 z-10">
+            <nav class="flex justify-between items-center relative">
+                <!-- Logo -->
+                <h1 class="text-3xl font-bold text-orange-600">SHAN</h1>
+                <!-- desktop menu -->
+                <div>
+                    <ul class="gap-8 lg:flex hidden">
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#home">HOME</a></li>
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#about-us">ABOUT US</a></li>
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#services">SERVICES</a></li>
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#portfolio">PORTFOLIO</a></li>
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#blog">BLOG</a></li>
+                        <li class="text-sm font-medium hover:text-orange-500"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <!-- mobile hamburger icon -->
+                <div class="lg:hidden">
+                    <button onclick="togglebtn()" class="w-8 h-8 bg-red-400 rounded-full">
+                        <i class="fa-solid fa-bars text-white" id="iconId"></i>
+                    </button>
+                </div>
+            </nav>
+            <!-- mobile menu -->
+            <div class="lg:hidden">
+                <ul id="menuId" class="flex flex-col gap-3 hidden py-4 absolute bg-white w-full left-0">
+                    <li class="border-b border-gray-300 pl-6"><a href="#home">HOME</a></li>
+                    <li class="border-b border-gray-300 pl-6"><a href="#about-us">ABOUT US</a></li>
+                    <li class="border-b border-gray-300 pl-6"><a href="#services">SERVICES</a></li>
+                    <li class="border-b border-gray-300 pl-6"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="border-b border-gray-300 pl-6"><a href="#blog">BLOG</a></li>
+                    <li class="border-b border-gray-300 pl-6"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="lg:px-32 md:px-8 px-6 mt-20" id="home">
+            <div class="lg:flex md:flex justify-between items-center space-y-5">
+                <!-- left content -->
+                <div class="lg:w-[50%] md:space-y-4 space-y-5" data-aos="fade-right">
+                    <div>
+                        <h3 class="font-medium text-lg">Hello there...</h3>
+                        <h1 class="font-semibold lg:text-6xl text-4xl">Tony Smith</h1>
+                    </div>
+                    <div>
+                        <h2 class="lg:text-lg font-semibold">I Am Passionate <span id="autoType"></span></h2>
+                    </div>
+                    <p class="lg:text-base text-sm lg:w-[80%] w-[100%]">The dynamics of how users interact with interactive elements within a user interface flow chart based on container proportion.</p>
+                    <div>
+                        <a href="#">
+                            <button class="cursor-pointer w-[110px] h-[44px] text-sm rounded-sm bg-orange-500 text-white hover:bg-black transition ease-in duration-3s">MY WORK</button>
+                        </a>
+                        <a href="#">
+                            <button class="cursor-pointer w-[110px] h-[44px] text-sm rounded-sm border border-orange-500 text-orange-600 hover:bg-orange-500 transition ease-in duration-3s hover:text-white">HIRE ME</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- right content -->
+                <div class="lg:w-[50%] flex justify-center items-center" data-aos="fade-left">
+                    <img src="Images/home-about.png" alt="home image">
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div class="bg-[#EAEDF2] lg:px-32 md:px-8 px-6 mt-20 pt-30" id="about-us">
+            <!-- About me heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">ABOUT ME</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div>  
+            <div class="flex lg:flex-row flex-col justify-between py-10">
+                <!-- left content -->
+                <div class="relative lg:w-[40%]" data-aos="fade-right">
+                    <!-- image -->
+                    <div>
+                        <img src="Images/about-us.jpg" alt="about-us image" class="lg:h-[480px] border-10 border-white rounded-lg">
+                    </div>
+                    <div class="absolute top-15 left-2">
+                        <button class="lg:w-12 lg:h-12 w-10 h-10 bg-orange-500 flex justify-center items-center border-6 border-white rounded-sm hover:bg-black">
+                            <i class="fa-brands fa-facebook-f lg:text-lg text-xs font-medium text-white"></i>
+                        </button>
+                        <button class="lg:w-12 lg:h-12 w-10 h-10 bg-orange-500 flex justify-center items-center border-6 border-white rounded-sm hover:bg-black">
+                            <i class="fa-brands fa-instagram lg:text-lg text-xs font-medium text-white"></i>
+                        </button>
+                        <button class="lg:w-12 lg:h-12 w-10 h-10 bg-orange-500 flex justify-center items-center border-6 border-white rounded-sm hover:bg-black">
+                            <i class="fa-brands fa-twitter lg:text-lg text-xs font-medium text-white"></i>
+                        </button>
+                        <button class="lg:w-12 lg:h-12 w-10 h-10 bg-orange-500 flex justify-center items-center border-6 border-white rounded-sm hover:bg-black">
+                            <i class="fa-brands fa-linkedin lg:text-lg text-xs font-medium text-white"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- right content -->
+                <div class="lg:w-[60%] lg:p-10 py-5 flex flex-col gap-3"  data-aos="fade-left">
+                    <h2 class="lg:text-3xl text-2xl font-bold">I'M Tony Smith</h2>
+                    <h5 class="lg:text-lg text-base">A Lead <span class="text-orange-700 font-semibold">UX & UI </span>designer based in Canada</h5>
+                    <p class="lg:text-base text-sm font-normal">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions. Check out my Portfolio</p>
+                
+                    <div class="w-full p-2 flex flex-col md:flex-row justify-between gap-6">
+                        <!-- left -->
+                        <div class="w-full md:w-[45%] space-y-4">
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Birthday</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">4th April 1991</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Age</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">22 Years</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Residence</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">Canada</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Address</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">California, USA</p>
+                            </div>
+                            <!-- baaki fields... -->
+                        </div>
+                        <!-- right -->
+                        <div class="w-full md:w-[45%] space-y-4">
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">E-mail</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">info@domain.com</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Phone</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">820-885-3321</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Skype</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">skype.0404</p>
+                            </div>
+                            <div class="flex items-center">
+                                <p class="w-[35%] text-gray-500 text-left pr-4 text-sm md:text-base font-medium">Freelance</p>
+                                <div class="w-px h-6 bg-gray-300"></div>
+                                <p class="pl-4 text-sm md:text-base font-normal">Available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" download="">
+                        <button class="text-sm font-normal bg-orange-500 px-6 py-3 w-fit text-white rounded-md cursor-pointer">DOWNLOAD CV</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MY Skill -->
+        <div class="lg:px-32 md:px-8 px-6 mt-20">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">MY SKILLS</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div>  
+            <!-- Boxes -->
+            <div class="flex lg:flex-row flex-col justify-between py-10">
+                <!-- left Content -->
+                <div class="flex flex-col lg:w-[43%]" data-aos="fade-right">
+                    <!-- HTML -->
+                    <div class="py-4">
+                        <div class="flex justify-between mb-2 w-[90%]">
+                            <div>
+                                <P class="text-sm">HTML</P>
+                            </div>
+                            <div>
+                                <P class="text-sm">90%</P>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 w-[100%] rounded-full" id="roll">
+                            <div class="bg-orange-500 w-[90%] p-1 rounded-full" id="ani"></div>
+                        </div>
+                    </div>
+                    <!-- TAILWIND  -->
+                    <div class="py-4">
+                        <div class="flex justify-between mb-2 w-[70%]">
+                            <div>
+                                <P class="text-sm">TAILWIND CSS</P>
+                            </div>
+                            <div>
+                                <P class="text-sm">60%</P>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 w-[100%] rounded-full" id="roll">
+                            <div class="bg-orange-500 w-[70%] p-1 rounded-full" id="ani"></div>
+                        </div>
+                    </div>
+                    <!-- JS -->
+                    <div class="py-4">
+                        <div class="flex justify-between mb-2 w-[60%]">
+                            <div>
+                                <P class="text-sm">JAVASCRIPT</P>
+                            </div>
+                            <div>
+                                <P class="text-sm">50%</P>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 w-[100%] rounded-full" id="roll">
+                            <div class="bg-orange-500 w-[60%] p-1 rounded-full" id="ani"></div>
+                        </div>
+                    </div>
+                    <!-- WORDPRESS -->
+                    <div class="py-4">
+                        <div class="flex justify-between mb-2 w-[80%]">
+                            <div>
+                                <P class="text-sm">WORDPRESS</P>
+                            </div>
+                            <div>
+                                <P class="text-sm">80%</P>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 w-[100%] rounded-full" id="roll">
+                            <div class="bg-orange-500 w-[80%] p-1 rounded-full" id="ani"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center gap-8 pt-6" data-aos="fade-left">
+                    <div class="flex flex-col gap-8">
+                        <div class="border border-orange-500 flex px-4 py-8 gap-5 rounded-md">
+                            <div>
+                                <i class="fa-solid fa-bullseye text-orange-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">80 Albumes Listened</p>
+                            </div>
+                        </div>
+                        <div class="border border-orange-500 flex px-4 py-8 gap-5 rounded-md">
+                            <div>
+                                <i class="fa-solid fa-award text-orange-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">15 Awards Won</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-8">
+                        <div class="border border-orange-500 flex px-4 py-8 gap-5 rounded-md">
+                            <div>
+                                <i class="fa-solid fa-mug-hot text-orange-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">1 000 Cups of coffee</p>
+                            </div>
+                        </div>
+                        <div class="border border-orange-500 flex px-4 py-8 gap-5 rounded-md">
+                            <div>
+                                <i class="fa-solid fa-flag text-orange-600 text-3xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">10 Countries Visited</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Services -->
+        <div class="lg:px-32 md:px-8 px-6 mt-20 bg-[#EAEDF2] py-20" id="services">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">MY SERVICES</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div> 
+            <!-- Grid box -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 py-15">
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-desktop text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Unique design</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-tags text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Different Layout</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-message text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Make it Simple</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-tablet text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Responsiveness</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-bullseye text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Testing for Perfection</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+                <div class="group bg-white hover:bg-orange-500 hover:text-white space-y-5 px-4 py-10 rounded-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg" data-aos="fade-up">
+                    <i class="fa-solid fa-headset text-lg px-5 py-5 rounded-full border-2 border-dotted border-orange-500 text-orange-500 group-hover:border-white group-hover:text-white transition-colors duration-300"></i>
+                    <h3 class="text-xl font-medium">Advanced Options</h3>
+                    <p class="text-[15px]">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                </div>
+            </div>
+              
+        </div>
+
+         <!-- Work -->
+        <div class="lg:px-32 md:px-8 px-6 mt-20 py-20" id="portfolio">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">LATEST WORK</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div> 
+            <!-- Grid box -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 pt-10">
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-1.jpg" alt="portfolio-image-1" class="rounded-md object-cover" data-aos="fade-up"></div>
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-2.jpg" alt="portfolio-image-2" class="rounded-md object-cover" data-aos="fade-up"></div>
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-3.jpg" alt="portfolio-image-3" class="rounded-md object-cover" data-aos="fade-up"></div>
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-4.jpg" alt="portfolio-image-4" class="rounded-md object-cover" data-aos="fade-up"></div>
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-5.jpg" alt="portfolio-image-5" class="rounded-md object-cover" data-aos="fade-up"></div>
+                <div class="transition-all duration-300 transform hover:-translate-y-5 hover:shadow-lg"><img src="Images/portfolio-6.jpg" alt="portfolio-image-6" class="rounded-md object-cover" data-aos="fade-up"></div>
+            </div>
+              
+        </div>
+
+        <!-- Testimonial -->
+        <div class="bg-[#EAEDF2] lg:px-32 md:px-8 px-6 mt-20 py-0 py-20">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">TESTIMONIALS</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="py-20 grid lg:grid-cols-2 md:gri grid-cols-1 gap-8">
+
+                <div class="bg-white-p-2 flex lg:flex-row flex-col items-center gap-5 bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition ease-in duration-300" data-aos="fade-up">
+                    <div>
+                        <img src="Images/team-4.jpg" alt="team-4" class="w-[150px] rounded-l-full rounded-b-full">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-medium text-lg">Nancy Brown</h1>
+                        <h2 class="text-base">Co-Founder</h2>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white-p-2 flex lg:flex-row flex-col gap-5 bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition ease-in duration-300" data-aos="fade-up">
+                    <div>
+                        <img src="Images/team-2.jpg" alt="team-4" class="w-[150px] rounded-l-full rounded-b-full">
+                    </div>
+                    <div class="space-y-2">
+                        <h1 class="font-medium text-lg">Nancy Brown</h1>
+                        <h2 class="text-base">Co-Founder</h2>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+         <!-- Blogs -->
+        <div class="lg:px-32 md:px-8 px-6 mt-10 py-0 lg:py-20 py-10" id="blog">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">LATEST BLOGS</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 gap-10 pt-10 space-y-20">
+
+                <div class="relative md:pb-10" data-aos="fade-up">
+                    <div>
+                        <img src="Images/blog-1.jpg" alt="blog-1">
+                    </div>
+                    <div class="w-[90%] absolute lg:top-54 lg:left-4 md:top-110 md:left-8 top-30 left-3 pb-10">
+
+                        <button class="bg-orange-600 lg:px-6 px-3 py-1 text-white lg:text-base text-sm">1 May 2025</button>
+
+                        <div class="bg-white lg:p-4 md:p-8 p-3 shadow-lg space-y-2">
+
+                            <button class="border px-3 border-gray-300 text-sm">Design</button>
+                            <h1 class="font-semibold lg:text-lg">Make your Marketing website</h1>
+                            <p class="lg:text-base text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a class="text-orange-600 lg:text-sm text-xs border-b" href="#">READ MORE</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative md:pb-10" data-aos="fade-up">
+                    <div>
+                        <img src="Images/blog-2.jpg" alt="blog-1">
+                    </div>
+                    <div class="w-[90%] absolute lg:top-54 lg:left-4 md:top-110 md:left-8 top-30 left-3 pb-10">
+
+                        <button class="bg-orange-600 lg:px-6 px-3 py-1 text-white lg:text-base text-sm">1 May 2025</button>
+
+                        <div class="bg-white lg:p-4 md:p-8 p-3 shadow-lg space-y-2">
+
+                            <button class="border px-3 border-gray-300 text-sm">Design</button>
+                            <h1 class="font-semibold lg:text-lg">Make your Marketing website</h1>
+                            <p class="lg:text-base text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a class="text-orange-600 lg:text-sm text-xs border-b" href="#">READ MORE</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-up">
+                    <div>
+                        <img src="Images/blog-3.jpg" alt="blog-1">
+                    </div>
+                    <div class="w-[90%] absolute lg:top-54 lg:left-4 md:top-110 md:left-8 top-30 left-3 pb-10">
+
+                        <button class="bg-orange-600 lg:px-6 px-3 py-1 text-white lg:text-base text-sm">1 May 2025</button>
+
+                        <div class="bg-white lg:p-4 md:p-8 p-3 shadow-lg space-y-2">
+
+                            <button class="border px-3 border-gray-300 text-sm">Design</button>
+                            <h1 class="font-semibold lg:text-lg">Make your Marketing website</h1>
+                            <p class="lg:text-base text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <a class="text-orange-600 lg:text-sm text-xs border-b" href="#">READ MORE</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contacts -->
+        <div class="bg-[#EAEDF2] lg:px-32 md:px-8 px-6 mt-20 py-0 py-20" id="contact">
+            <!-- Heading -->
+            <div class="flex flex-col gap-2" data-aos="fade-up">
+                <h1 class="font-bold lg:text-4xl text-2xl">GET IN TOUCH</h1>
+                <div class="border-2 lg:w-[4%] w-[10%] border-orange-400"></div>
+                <p class="text-base font-normal">A Lead UX & UI designer based in Canada</p>
+            </div>
+            
+            <!-- CONTACT FORM -->
+            <div class="py-10" data-aos="fade-up">
+                <div class="flex lg:flex-row flex-col items-center lg:gap-10 md:gap-5 gap-5">
+
+                    <!-- rigjt content -->
+                    <div class="bg-white p-6 rounded-lg shadow-xl">
+                        <h1 class="text-xl font-bold mb-2">SAY SOMETHING</h1>
+                        <form action="" class="flex flex-col lg:gap-8 gap-4" onsubmit="signinForm(event)">
+
+                            <div class="lg:space-x-5 md:flex">
+                                <input type="text" name="name"   placeholder="Name * " class="border-b lg:w-xs w-full py-3 lg:text-base text-sm outline-none">
+                                <input type="email" name="email" placeholder="Email *" class="border-b lg:w-xs w-full py-3 lg:text-base text-sm outline-none">
+                            </div>
+
+                            <input type="text" name="subject" placeholder="Subject" class="border-b w-full py-3 lg:text-base text-sm
+                            lg:text-base text-sm outline-none">
+                            <textarea name="" id="" placeholder="Mesage *" class="border-b w-full lg:text-base text-sm
+                            lg:text-base text-sm outline-none" rows="4"></textarea>
+                            <button class="bg-orange-600 text-white w-fit px-5 py-4 rounded-sm lg:text-sm text-xs">SEND MESSAGE</button>
+                        </form>
+                    </div>
+
+                    <!-- left content -->
+                    <div class="flex flex-col space-y-7">
+
+                        <div class="bg-white flex items-center gap-4 px-4 py-6 rounded-sm shadow-xl">
+                            <div>
+                                <button class="w-10 h-10 bg-orange-500 rounded-full text-white">
+                                    <i class="fa fa-location-dot"></i>
+                                </button>
+                            </div>
+                            <div class="space-y-2">
+                                <h5 class="text-lg font-semibold">Our Address</h5>
+                                <p class="text-sm">
+                                    123 Stree New York City
+                                    Of America 750065.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white flex items-center gap-4 px-4 py-6 rounded-sm shadow-xl">
+                            <div>
+                                <button class="w-10 h-10 bg-orange-500 rounded-full text-white">
+                                    <i class="fa fa-phone"></i>
+                                </button>
+                            </div>
+                            <div class="space-y-2">
+                                <h5 class="text-lg font-semibold">Our Phone</h5>
+                                <p class="text-sm">
+                                    Office: +004 44444 44444
+                                    <br>
+                                    Office: +004 44444 44444
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white flex items-center gap-4 px-4 py-6 rounded-sm shadow-xl">
+                            <div>
+                                <button class="w-10 h-10 bg-orange-500 rounded-full text-white">
+                                    <i class="fa fa-envelope"></i>
+                                </button>
+                            </div>
+                            <div class="space-y-2">
+                                <h5 class="text-lg font-semibold">Our Email</h5>
+                                <p class="text-sm">
+                                    info@domainname.com <br>
+                                    contact@domainname.com
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-black p-2">
+            <div class="flex lg:flex-row md:flex-row flex-col justify-evenly items-center gap-2">
+                <div class="space-x-6">
+                    <i class="text-gray-400 hover:text-white cursor-pointer text-sm fa-brands fa-facebook-f"></i>
+                    <i class="text-gray-400 hover:text-white cursor-pointer text-sm fa-brands fa-instagram"></i>
+                    <i class="text-gray-400 hover:text-white cursor-pointer text-sm fa-brands fa-x"></i>
+                    <i class="text-gray-400 hover:text-white cursor-pointer text-sm fa-brands fa-linkedin"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-400 hover:text-white cursor-pointer">© 2025 copyright all right reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
+
